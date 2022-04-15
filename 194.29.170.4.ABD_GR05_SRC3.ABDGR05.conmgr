@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="194.29.170.4.ABD_GR05_SRC3.ABDGR05"
+  DTS:DTSID="{D5C78D23-1806-4F70-85AA-29813ADF2C47}"
+  DTS:CreationName="ADO">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=194.29.170.4;User ID=ABDGR05;Initial Catalog=ABD_GR05_SRC3;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAACAAAAAAAQZgAAAAEAACAAAAA2BYjpgDl3MjG+LDBU9UIIkrYoNGGf8NcbUkulQN9LNQAAAAAOgAAAAAIAACAAAAAgl3KMPKQMU6XLtUabTTfsrk3PWdB0IR7xZ59mJZF8coAAAADKyWG/1ZTaEyxM4oyIt7Q+5aDqAapb9qjfelo8EbJAqMnbYXKg6xvnbTo4sTQQ6dlt/caQ22xEu85DM4Hz+1aoTuBs50VP+moQhs4mwGW53b+wC+IGOG0xgsr3A33Ic4NrR3bPlALHPyVFVxORNgtikEcN90qjXgb2xat4++diDUAAAAAYxLF0giwSG4PzrDdnmvHYCniOC0jzGSqrR2v6ujBXRvtolzN28Gy8axt/Ia0Y4Ey8cznl5XjnNtd/cN7y4+qo</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
