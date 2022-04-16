@@ -1,0 +1,1698 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/16/2022 10:59:45 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-NLGR6P9"
+  DTS:CreatorName="DESKTOP-NLGR6P9\Marcin"
+  DTS:DTSID="{A97B3101-010A-47F3-85BC-13DF60531018}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="LoadDW_DimKlient_ODS"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{6F6E35B7-4D09-4934-9273-3E700B786D9A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2E246B8F-C104-4F3B-BACB-969A6E1C99FD}"
+      DTS:ObjectName="194.29.170.4.ABD_GR05_DW.ABDGR05 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=194.29.170.4;User ID=ABDGR05;Initial Catalog=ABD_GR05_DW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAABXixfktv9HHc8shkoumxKf4rDJfS0sioVeAOY9sd5IAAAAAAOgAAAAAIAACAAAADl8sV45t0Qs3jm2STD6s7NP4eqYpEd1/sKO98NhtsdwCAAAACFYAJ+dduGmR1AFhO9OKDXoyTakZxMDjNzKCVABVkfmEAAAABbjvNsCTnujVRkCD+9R6g/WjR2GesW13AeVAOqdDYZx8ugRjOqMp0mzxoz55ty3nS59KW76V+v1j1pmrL6zp0Z</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_ODS.ABDGR05 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{06FDD0B9-DC84-4F9B-859C-FE35176EF64E}"
+      DTS:ObjectName="194.29.170.4.ABD_GR05_ODS.ABDGR05 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=194.29.170.4;User ID=ABDGR05;Initial Catalog=ABD_GR05_ODS;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACtFwO+djMcdYKva7pxi6zPAEawHo1l4VC4lzP22FhkuQAAAAAOgAAAAAIAACAAAABJGbh5LHPUyf40hcL/pXQb9QCPqZglCsfi6gsav9cWsSAAAACk8joPIQdmz58VYJSDF5KRs6U9soI2CCvm0UC2AOv5UkAAAADI83QRGxzsbnZCOBM4aHM+Xmq8QeMkWpxNyS1hvCPyGKBkOuur/rXnT9v3YUReQKCcGVX1AzoK5Ra3trFmz9lo</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load DimKlient"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AFA735AA-2718-4B9C-B19C-9030325DA274}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load DimKlient"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load DimKlient\DimKlientSt"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="DimKlientSt"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimKlientSt]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimKlient\DimKlientSt.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_ODS.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_ODS.ABDGR05 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Imie]"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Imie]"
+                      name="Imie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Nazwisko]"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Nazwisko]"
+                      name="Nazwisko"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataUrodzenia]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[DataUrodzenia]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataUrodzenia]"
+                      name="DataUrodzenia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Pesel]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Pesel]"
+                      length="11"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Pesel]"
+                      name="Pesel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[AdresMailowy]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[AdresMailowy]"
+                      length="50"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[AdresMailowy]"
+                      name="AdresMailowy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerTelefonu]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[NumerTelefonu]"
+                      length="12"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerTelefonu]"
+                      name="NumerTelefonu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdAdresT]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[IdAdresT]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdAdresT]"
+                      name="IdAdresT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Ulica]"
+                      name="Ulica"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Miasto]"
+                      name="Miasto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[KodPocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[KodPocztowy]"
+                      length="6"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[KodPocztowy]"
+                      name="KodPocztowy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerLokalu]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[NumerLokalu]"
+                      length="8"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerLokalu]"
+                      name="NumerLokalu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataUtworzenia]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[DataUtworzenia]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataUtworzenia]"
+                      name="DataUtworzenia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataModyfikacji]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[DataModyfikacji]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataModyfikacji]"
+                      name="DataModyfikacji"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdKlientT]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[IdKlientT]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdKlientT]"
+                      name="IdKlientT"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Imie" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Nazwisko" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[DataUrodzenia]"
+                      dataType="dbDate"
+                      name="DataUrodzenia" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Pesel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="11"
+                      name="Pesel" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[AdresMailowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="AdresMailowy" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[NumerTelefonu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="12"
+                      name="NumerTelefonu" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[IdAdresT]"
+                      dataType="i4"
+                      name="IdAdresT" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[KodPocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="KodPocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[NumerLokalu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="NumerLokalu" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[DataUtworzenia]"
+                      dataType="dbTimeStamp"
+                      name="DataUtworzenia" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[DataModyfikacji]"
+                      dataType="dbTimeStamp"
+                      name="DataModyfikacji" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].ExternalColumns[IdKlientT]"
+                      dataType="i4"
+                      name="IdKlientT" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[IdKlientT]"
+                      dataType="i4"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[IdKlientT]"
+                      name="IdKlientT" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Imie]"
+                      name="Imie" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Nazwisko]"
+                      name="Nazwisko" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[DataUrodzenia]"
+                      dataType="dbDate"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[DataUrodzenia]"
+                      name="DataUrodzenia" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Pesel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Pesel]"
+                      name="Pesel" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[AdresMailowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[AdresMailowy]"
+                      name="AdresMailowy" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[NumerTelefonu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[NumerTelefonu]"
+                      name="NumerTelefonu" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[IdAdresT]"
+                      dataType="i4"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[IdAdresT]"
+                      name="IdAdresT" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      name="Ulica" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      name="Miasto" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[KodPocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[KodPocztowy]"
+                      name="KodPocztowy" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[NumerLokalu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[NumerLokalu]"
+                      name="NumerLokalu" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[DataUtworzenia]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[DataUtworzenia]"
+                      name="DataUtworzenia" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[DataModyfikacji]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[DataModyfikacji]"
+                      name="DataModyfikacji" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimKlient\Insert Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimKlient]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimKlient\Insert Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[IdKlientT]"
+                      cachedDataType="i4"
+                      cachedName="IdKlientT"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdKlientT]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdKlientT]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[Imie]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Imie"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Imie]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Imie]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[Nazwisko]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Nazwisko"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nazwisko]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Nazwisko]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[DataUrodzenia]"
+                      cachedDataType="dbDate"
+                      cachedName="DataUrodzenia"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[DataUrodzenia]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataUrodzenia]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[Pesel]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Pesel"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pesel]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Pesel]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[AdresMailowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AdresMailowy"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AdresMailowy]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[AdresMailowy]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[NumerTelefonu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="NumerTelefonu"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[NumerTelefonu]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerTelefonu]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[IdAdresT]"
+                      cachedDataType="i4"
+                      cachedName="IdAdresT"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdAdresT]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdAdresT]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Ulica"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Ulica]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Miasto"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Miasto]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[KodPocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="KodPocztowy"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[KodPocztowy]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[KodPocztowy]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].Columns[NumerLokalu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="NumerLokalu"
+                      externalMetadataColumnId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[NumerLokalu]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerLokalu]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdKlient]"
+                      dataType="i4"
+                      name="IdKlient" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdKlientT]"
+                      dataType="i4"
+                      name="IdKlientT" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Imie" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Nazwisko" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[DataUrodzenia]"
+                      dataType="dbDate"
+                      name="DataUrodzenia" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pesel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="11"
+                      name="Pesel" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AdresMailowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="AdresMailowy" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[NumerTelefonu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="12"
+                      name="NumerTelefonu" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdAdresT]"
+                      dataType="i4"
+                      name="IdAdresT" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[KodPocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="KodPocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[NumerLokalu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="NumerLokalu" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[DataUtworzenia]"
+                      dataType="dbTimeStamp"
+                      name="DataUtworzenia" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[DataModyfikacji]"
+                      dataType="dbTimeStamp"
+                      name="DataModyfikacji" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimKlient\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimKlient\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimKlient\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimKlient\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimKlient] SET [AdresMailowy] = ?,[DataUrodzenia] = ?,[IdAdresT] = ?,[Imie] = ?,[KodPocztowy] = ?,[Miasto] = ?,[Nazwisko] = ?,[NumerLokalu] = ?,[NumerTelefonu] = ?,[Pesel] = ?,[Ulica] = ? WHERE [IdKlientT] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimKlient\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[AdresMailowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AdresMailowy"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[AdresMailowy]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[DataUrodzenia]"
+                      cachedDataType="dbDate"
+                      cachedName="DataUrodzenia"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataUrodzenia]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[IdAdresT]"
+                      cachedDataType="i4"
+                      cachedName="IdAdresT"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdAdresT]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[IdKlientT]"
+                      cachedDataType="i4"
+                      cachedName="IdKlientT"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdKlientT]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[Imie]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Imie"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Imie]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[KodPocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="KodPocztowy"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[KodPocztowy]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Miasto"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Miasto]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[Nazwisko]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Nazwisko"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Nazwisko]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[NumerLokalu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="NumerLokalu"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerLokalu]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[NumerTelefonu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="NumerTelefonu"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerTelefonu]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[Pesel]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Pesel"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Pesel]" />
+                    <inputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].Columns[Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Ulica"
+                      externalMetadataColumnId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Ulica]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="dbDate"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      codePage="1250"
+                      dataType="str"
+                      length="12"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      codePage="1250"
+                      dataType="str"
+                      length="11"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Param_10">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      dataType="i4"
+                      name="Param_11">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimKlient\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimKlient\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimKlient\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimKlient\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimKlient\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimKlient\Slowly Changing Dimension 1"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension 1"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [AdresMailowy], [DataUrodzenia], [IdAdresT], [IdKlientT], [Imie], [KodPocztowy], [Miasto], [Nazwisko], [NumerLokalu], [NumerTelefonu], [Pesel], [Ulica] FROM [dbo].[DimKlient]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimKlient\Slowly Changing Dimension 1.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[AdresMailowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AdresMailowy"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[AdresMailowy]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[AdresMailowy]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[DataUrodzenia]"
+                      cachedDataType="dbDate"
+                      cachedName="DataUrodzenia"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[DataUrodzenia]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[DataUrodzenia]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[IdAdresT]"
+                      cachedDataType="i4"
+                      cachedName="IdAdresT"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdAdresT]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdAdresT]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[IdKlientT]"
+                      cachedDataType="i4"
+                      cachedName="IdKlientT"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdKlientT]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[IdKlientT]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[Imie]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Imie"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Imie]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Imie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[KodPocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="KodPocztowy"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[KodPocztowy]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[KodPocztowy]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Miasto"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Miasto]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Miasto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[Nazwisko]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Nazwisko"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Nazwisko]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Nazwisko]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[NumerLokalu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="NumerLokalu"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[NumerLokalu]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerLokalu]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[NumerTelefonu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="NumerTelefonu"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[NumerTelefonu]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerTelefonu]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[Pesel]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Pesel"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Pesel]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Pesel]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Ulica"
+                      externalMetadataColumnId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Ulica]"
+                      lineageId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output].Columns[Ulica]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[AdresMailowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="AdresMailowy" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[DataUrodzenia]"
+                      dataType="dbDate"
+                      name="DataUrodzenia" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdAdresT]"
+                      dataType="i4"
+                      name="IdAdresT" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdKlientT]"
+                      dataType="i4"
+                      name="IdKlientT" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Imie" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[KodPocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="KodPocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Nazwisko" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[NumerLokalu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="NumerLokalu" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[NumerTelefonu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="12"
+                      name="NumerTelefonu" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Pesel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="11"
+                      name="Pesel" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Ulica" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimKlient\Slowly Changing Dimension 1.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimKlient\Slowly Changing Dimension 1.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimKlient\Slowly Changing Dimension 1.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimKlient\Slowly Changing Dimension 1.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimKlient\Slowly Changing Dimension 1.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimKlient\Slowly Changing Dimension 1.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load DimKlient.Paths[Changing Attribute Updates Output]"
+              endId="Package\Load DimKlient\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\Load DimKlient\Slowly Changing Dimension 1.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\Load DimKlient.Paths[New Output]"
+              endId="Package\Load DimKlient\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\Load DimKlient\Slowly Changing Dimension 1.Outputs[New Output]" />
+            <path
+              refId="Package\Load DimKlient.Paths[OLE DB Source Output]"
+              endId="Package\Load DimKlient\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
+              name="OLE DB Source Output"
+              startId="Package\Load DimKlient\DimKlientSt.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Load DimKlient"
+          TopLeft="521,178" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load DimKlient">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Load DimKlient\OLE DB Command"
+          TopLeft="231.5,230.5" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Load DimKlient\Slowly Changing Dimension 1"
+          TopLeft="205.5,128.5" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Load DimKlient\Insert Destination"
+          TopLeft="5.50000000000006,230.5" />
+        <NodeLayout
+          Size="288,63"
+          Id="Package\Load DimKlient\DimKlientSt"
+          TopLeft="203.5,10.4999999999999" />
+        <EdgeLayout
+          Id="Package\Load DimKlient.Paths[OLE DB Source Output]"
+          TopLeft="347.5,73.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-29.5,55.0000000000001"
+              Start="0,0"
+              End="-29.5,47.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5000000000001"
+                    Point2="0,27.5000000000001"
+                    Point3="-4,27.5000000000001" />
+                  <mssgle:LineSegment
+                    End="-25.5,27.5000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.5,27.5000000000001"
+                    Point2="-29.5,27.5000000000001"
+                    Point3="-29.5,31.5000000000001" />
+                  <mssgle:LineSegment
+                    End="-29.5,47.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimKlient.Paths[New Output]"
+          TopLeft="281.833333333333,170.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-193.833333333333,60.0000000000001"
+              Start="0,0"
+              End="-193.833333333333,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2541924095323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2541924095323"
+                    Point2="0,24.2541924095323"
+                    Point3="-4,24.2541924095323" />
+                  <mssgle:LineSegment
+                    End="-189.833333333333,24.2541924095323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-189.833333333333,24.2541924095323"
+                    Point2="-193.833333333333,24.2541924095323"
+                    Point3="-193.833333333333,28.2541924095323" />
+                  <mssgle:LineSegment
+                    End="-193.833333333333,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-124.008053385417,29.2541924095323,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimKlient.Paths[Changing Attribute Updates Output]"
+          TopLeft="354.166666666667,170.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-36.1666666666666,60"
+              Start="0,0"
+              End="-36.1666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2541924095322" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2541924095322"
+                    Point2="0,24.2541924095322"
+                    Point3="-4,24.2541924095322" />
+                  <mssgle:LineSegment
+                    End="-32.1666666666666,24.2541924095322" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32.1666666666666,24.2541924095322"
+                    Point2="-36.1666666666666,24.2541924095322"
+                    Point3="-36.1666666666666,28.2541924095322" />
+                  <mssgle:LineSegment
+                    End="-36.1666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-96.6172395833333,29.2541924095322,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimKlient\Slowly Changing Dimension 1">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{2E246B8F-C104-4F3B-BACB-969A6E1C99FD}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DimKlient]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[AdresMailowy]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;AdresMailowy&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[DataUrodzenia]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;DataUrodzenia&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[IdAdresT]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;IdAdresT&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[IdKlientT]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;IdKlientT&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[Imie]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Imie&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[KodPocztowy]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;KodPocztowy&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[Miasto]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Miasto&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[Nazwisko]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Nazwisko&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerLokalu]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;NumerLokalu&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[NumerTelefonu]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;NumerTelefonu&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[Pesel]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Pesel&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimKlientSt.Outputs[OLE DB Source Output].Columns[Ulica]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Ulica&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimKlient\DimKlientSt">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

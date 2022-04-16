@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LoadODS_DimModelSt_SRC3"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{76CC01EF-05BF-4EF6-8325-B0BCE53619D9}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{31457A22-E2DC-4DF0-8E11-C6631F8235D4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAuxgD/WjOwZ/U2YhTZHkB+2RqAI/lZ/5eqEJe6BLwu4QAAAAAOgAAAAAIAACAAAACJDSU6mhjxuRQBvQZkroLoViRn7gNwpjspLC0zODWVTCAAAAB5+SOlZ81MEqvL6nGgCuTAVl+c3aPKUXAfXllR6J5FZEAAAABeI6mOea7YYrV8Bkamj+uyx7nQ6SGvZaWdxLCj3oSBOjCg0y/jn09n1t5CcH5xVwqzEh14ngsUg6iuZVcQE2yL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADpCcQPMrPlHyBteBG1GMAG6Jn40YcwXal+wagmvIJgjAAAAAAOgAAAAAIAACAAAABOzWQnBRgBRAy2LqBV9JCZyGY+FVgpaU5cxAkcx9DDAyAAAAAJEQrcCEB7kE2YHMfHUk9sZZbJggMdbyv4BSpLCaDdMEAAAADgpBMADGy/2jmedmZveUrftlUUf4N24j6IZ2m+e6nXDeEADx/y1t3/pVvM8jNxnyFC8J10SR0etUzE1aaQhJVy</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADxOeS80pCt8yWbYCXtqmrkxOwrnT2767eqh5KHqP4EGwAAAAAOgAAAAAIAACAAAADsG6Tx8NB+vSwzBFwGqYEogCw/sSePSPuW9QOLYlDA2iAAAABvLcYi7lafx7u3sX6ikrbfDBoVLtvPKED21IqlKHHQYEAAAAAyvpkm3nkXpJCRwJppLm9SXF+7F/W2er6Ks+ecVhXY3awfzuGB3D3ozUNDbMuuADNiJwxWgKq+VMIhn9VsQdCg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/d00/LYhdE1NuKlh4kLTah4Z5r9nTM7UNta/glfOuiQAAAAAOgAAAAAIAACAAAABxjjDHGB1c6TbK6ikCJ69YgZHNnguc+U0xAXa9W0aM4iAAAADHkO8UP5JU6BHMmwVqryP2UQAbg2/zDS2tKPLgxWZVCkAAAABEeUt9SnbisanJwt9penqmphnDyoXeMbiB5kzJ6bF3FkEKklAg2toMZEfupxbexa/osmcjjIw/YJ9mtdCJQtwd</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -63,7 +63,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABJwOWOgfcFcsw/u9eJx/OW4EbeLqbSep4l4ZSvrVWHsQAAAAAOgAAAAAIAACAAAABaXjvdv7U4rSW89bXl3z9Rkx2xMfAFs8RQQjHZWbr4WSAAAACpIZffX30vjQVBk0pqSzuVbZsU/uf3cPd6en3XQELHzEAAAAARzmXW9tbLgfjHqi6tVHiCBLREg6un/jc8YcUaaULLxheZ5OIOffSpsNMmTaJmfwpTvIcTdhEfufqfQKGc72w3</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8jBYQnc/N7CsMGvFr29keJsuC2uTZ+5U2WMEeNXVbRQAAAAAOgAAAAAIAACAAAABzu6D3BjVMuLS3iMYo41GD28ZdhElRdXHChg6za833yyAAAAB15oAa+JCG0BpY0ZjevHA5sX/ME8QKKfmF5IsVV5sM/UAAAAAx9sEK97fLQ3JfHOtQCgXeqHMmiIPEg50t2yiYjipyr6m5vDNcCYM886a32xZBduSyb7JH7maFkZELN8Y55ScC</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -211,6 +211,12 @@
                       cachedName="NazwaModelu"
                       externalMetadataColumnId="Package\Load DimModelSt\DimModelSt.Inputs[OLE DB Destination Input].ExternalColumns[NazwaModelu]"
                       lineageId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Output].Columns[NazwaModelu]" />
+                    <inputColumn
+                      refId="Package\Load DimModelSt\DimModelSt.Inputs[OLE DB Destination Input].Columns[DataWprowadzeniaNaRynek]"
+                      cachedDataType="dbDate"
+                      cachedName="DataWprowadzeniaNaRynek"
+                      externalMetadataColumnId="Package\Load DimModelSt\DimModelSt.Inputs[OLE DB Destination Input].ExternalColumns[DataWprowadzeniaNaRynek]"
+                      lineageId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Output].Columns[DataWprowadzeniaNaRynek]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -250,6 +256,10 @@
                       dataType="str"
                       length="30"
                       name="NazwaModelu" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimModelSt\DimModelSt.Inputs[OLE DB Destination Input].ExternalColumns[DataWprowadzeniaNaRynek]"
+                      dataType="dbTimeStamp"
+                      name="DataWprowadzeniaNaRynek" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -308,16 +318,52 @@
       ,[NazwaMarki]
       ,[NazwaSerii]
       ,[NazwaModelu]
+	  ,[DataWprowadzeniaNaRynek]
   FROM [dbo].[TypyUrzadzen] t 
-  inner join [dbo].[Sprzety] s 
-  on s.IdTypuUrzadzenia = t.IdTypuUrzadzenia
-  inner join [dbo].[Modele] m 
-  on s.IdModelu = m.IdModelu 
-  inner join [dbo].[Serie] sr 
-  on m.IdSerii = sr.IdSerii
-  inner join [dbo].[Marki] mr 
-  on sr.IdMarki = mr.IdMarki
-  where m.[DataModyfikacji] &gt;= dateadd(day,-1,cast(CURRENT_TIMESTAMP as date))</property>
+  inner join [dbo].[Sprzety] s on s.IdTypuUrzadzenia = t.IdTypuUrzadzenia
+  inner join [dbo].[Modele] m on s.IdModelu = m.IdModelu 
+  inner join [dbo].[Serie] sr on m.IdSerii = sr.IdSerii
+  inner join [dbo].[Marki] mr on sr.IdMarki = mr.IdMarki
+  where m.[DataModyfikacji] &gt;= dateadd(day,-1,cast(CURRENT_TIMESTAMP as date))
+  union
+  SELECT m.[IdModelu] as IdModeluT
+      ,[NazwaTypuUrzadzenia]
+      ,[NazwaMarki]
+      ,[NazwaSerii]
+      ,[NazwaModelu]
+	  ,[DataWprowadzeniaNaRynek]
+  FROM [dbo].[TypyUrzadzen] t 
+  inner join [dbo].[Sprzety] s on s.IdTypuUrzadzenia = t.IdTypuUrzadzenia
+  inner join [dbo].[Modele] m on s.IdModelu = m.IdModelu 
+  inner join [dbo].[Serie] sr on m.IdSerii = sr.IdSerii
+  inner join [dbo].[Marki] mr on sr.IdMarki = mr.IdMarki
+  where s.[DataModyfikacji] &gt;= dateadd(day,-1,cast(CURRENT_TIMESTAMP as date))
+   union
+  SELECT m.[IdModelu] as IdModeluT
+      ,[NazwaTypuUrzadzenia]
+      ,[NazwaMarki]
+      ,[NazwaSerii]
+      ,[NazwaModelu]
+	  ,[DataWprowadzeniaNaRynek]
+  FROM [dbo].[TypyUrzadzen] t 
+  inner join [dbo].[Sprzety] s on s.IdTypuUrzadzenia = t.IdTypuUrzadzenia
+  inner join [dbo].[Modele] m on s.IdModelu = m.IdModelu 
+  inner join [dbo].[Serie] sr on m.IdSerii = sr.IdSerii
+  inner join [dbo].[Marki] mr on sr.IdMarki = mr.IdMarki
+  where sr.[DataModyfikacji] &gt;= dateadd(day,-1,cast(CURRENT_TIMESTAMP as date))
+   union
+  SELECT m.[IdModelu] as IdModeluT
+      ,[NazwaTypuUrzadzenia]
+      ,[NazwaMarki]
+      ,[NazwaSerii]
+      ,[NazwaModelu]
+	  ,[DataWprowadzeniaNaRynek]
+  FROM [dbo].[TypyUrzadzen] t 
+  inner join [dbo].[Sprzety] s on s.IdTypuUrzadzenia = t.IdTypuUrzadzenia
+  inner join [dbo].[Modele] m on s.IdModelu = m.IdModelu 
+  inner join [dbo].[Serie] sr on m.IdSerii = sr.IdSerii
+  inner join [dbo].[Marki] mr on sr.IdMarki = mr.IdMarki
+  where mr.[DataModyfikacji] &gt;= dateadd(day,-1,cast(CURRENT_TIMESTAMP as date))</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -406,6 +452,15 @@
                       lineageId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Output].Columns[NazwaModelu]"
                       name="NazwaModelu"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Output].Columns[DataWprowadzeniaNaRynek]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Output].ExternalColumns[DataWprowadzeniaNaRynek]"
+                      lineageId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Output].Columns[DataWprowadzeniaNaRynek]"
+                      name="DataWprowadzeniaNaRynek"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -437,6 +492,10 @@
                       dataType="str"
                       length="30"
                       name="NazwaModelu" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Output].ExternalColumns[DataWprowadzeniaNaRynek]"
+                      dataType="dbDate"
+                      name="DataWprowadzeniaNaRynek" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -477,6 +536,11 @@
                       length="30"
                       lineageId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Error Output].Columns[NazwaModelu]"
                       name="NazwaModelu" />
+                    <outputColumn
+                      refId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Error Output].Columns[DataWprowadzeniaNaRynek]"
+                      dataType="dbDate"
+                      lineageId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Error Output].Columns[DataWprowadzeniaNaRynek]"
+                      name="DataWprowadzeniaNaRynek" />
                     <outputColumn
                       refId="Package\Load DimModelSt\Modele.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -585,21 +649,21 @@
         <NodeLayout
           Size="139,42"
           Id="Package\Load DimModelSt\DimModelSt"
-          TopLeft="349,368" />
+          TopLeft="349,367" />
         <EdgeLayout
           Id="Package\Load DimModelSt.Paths[OLE DB Source Output]"
           TopLeft="418.5,238">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,130"
+              EndConnector="0,129"
               Start="0,0"
-              End="0,122.5">
+              End="0,121.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,122.5" />
+                    End="0,121.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

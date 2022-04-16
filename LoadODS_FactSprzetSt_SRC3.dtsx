@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{01672055-4F6D-44AD-83F6-2633C89F6DC1}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{4BEE7E7E-A36C-4B12-AE46-17F09C513781}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAD+GRDqLqIlTawKoQ0BvGXxNkimTOZR90eCKZEWWLQsgAAAAAOgAAAAAIAACAAAAALws4gLXdmW+SuqrzRlDQ8bqKU6UJ5pqKZB+2OBWotriAAAAACgvnovqsVICwO97z5FYf2bc+7oXiyVVMEUDLeSnYogkAAAADV/bE616jglulErE/r3gcp4HdAxzkbCy9DDaDVusDK3E6RZn5VLeURJsOlzQggyUz7egqr1w5B+a/ADwgQC56O</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAPo9gx0YRZhqwlB6eN70/mEccCkSwVLuxSYA5oWdqW7wAAAAAOgAAAAAIAACAAAAAynOYD49Jiiq6XnTq6qmfZFVK6J31xzndmVEtHRfFQrCAAAACffeinvMUv8ZJ5IjqWWpXNTRK7SpNS1wBUvYzNKBUyIUAAAADnv96Cfw87D/alKnF0xogkHr0SG94nKjjKA7rrMIu+mxWbycIaA24EWBBiUlL83KrOSuBcfEJ9LWjFdBZvetDz</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAADaxp5YhxYCvwtojWqb+tkKw0yc/EXPYst4pw+55BjxgAAAAAOgAAAAAIAACAAAADWdmn5p3fuXtRSTpuLPQm9CtTuCdS516MJ9SLYDShqIyAAAABuRv1gRz7ydR9v3MJeaanBnMdU4LVRO0ZnykVwYC1QL0AAAACQtEa5Qz2+R9nB1WIAS7ZJ22idX26stOUYOplBNZr0y1scaxgtBTdz35gjIyvrCdGpxjAkroPZzoFKY8l3f7Qb</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADvpCdlehLoCL/p3lEicTYYhsz67O9R9IkPeYtpC9nHdgAAAAAOgAAAAAIAACAAAABGaxQD3p6h7aCS2KTIhUY/+Z66KeFo2/Pqcdnb49HqhSAAAACPbPgbRAMx4iF3z+RpwOv2meeSQ07U9gIMKYL4IIGpgkAAAADuJtTaUmP8WpbQNbh0Uau2pG5E3cPxGyNLIHjmGl8TbLvW64itmgt3LzXv+8IOobt43MFBeTeUrV63DhVqxg2+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -63,7 +63,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA3ik83k3VEehbO1iMyA1pKnfd2AbM6VJdjyF2TDE+BhwAAAAAOgAAAAAIAACAAAABElB6Wym5PYCJfyg8HBgQCcnqUHwBRBifI4x+44s2mWyAAAABw8ZPSa5e6Z3QdxHxbxl8XwpoP4OYmoNsZNBDyP2YOt0AAAADVg4a8q6S7UdQLc81MRYHWy0Dtv94zefqdrLrseKcv19JXiBlvstk8O0D+jlPI2l4Ey7c+JRVJ1vBecQXdCoeJ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+DGCJUK4e3fweASISj1ZD1kidpAG328YzC2lkOFkjawAAAAAOgAAAAAIAACAAAABFpimOPfztpzTgopJVkswWHj/ftfHd7IbfIF1TWHusBiAAAABaJoKj4CgKCgvSgjLy2niyfgz3MaV4MPGU764kDnClJUAAAAAN/Ij11LN5MAQ1UgMNgnPL+ZnpEGzAyJcuaM7WrlxrqQhQAgm/C6d+d44kKlPGXAy/qDbz2qF9RXHRDXJv7xq3</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -182,12 +182,6 @@
                       externalMetadataColumnId="Package\Load FactSprzetSt\FactSprzetySt.Inputs[OLE DB Destination Input].ExternalColumns[Nazwa]"
                       lineageId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Output].Columns[Nazwa]" />
                     <inputColumn
-                      refId="Package\Load FactSprzetSt\FactSprzetySt.Inputs[OLE DB Destination Input].Columns[DataWprowadzeniaNaRynek]"
-                      cachedDataType="dbDate"
-                      cachedName="DataWprowadzeniaNaRynek"
-                      externalMetadataColumnId="Package\Load FactSprzetSt\FactSprzetySt.Inputs[OLE DB Destination Input].ExternalColumns[DataWprowadzeniaNaRynek]"
-                      lineageId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Output].Columns[DataWprowadzeniaNaRynek]" />
-                    <inputColumn
                       refId="Package\Load FactSprzetSt\FactSprzetySt.Inputs[OLE DB Destination Input].Columns[LiczbaSztuk]"
                       cachedDataType="i4"
                       cachedName="LiczbaSztuk"
@@ -224,10 +218,6 @@
                       dataType="str"
                       length="30"
                       name="Nazwa" />
-                    <externalMetadataColumn
-                      refId="Package\Load FactSprzetSt\FactSprzetySt.Inputs[OLE DB Destination Input].ExternalColumns[DataWprowadzeniaNaRynek]"
-                      dataType="dbTimeStamp"
-                      name="DataWprowadzeniaNaRynek" />
                     <externalMetadataColumn
                       refId="Package\Load FactSprzetSt\FactSprzetySt.Inputs[OLE DB Destination Input].ExternalColumns[LiczbaSztuk]"
                       dataType="i4"
@@ -295,7 +285,6 @@
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [IdSprzetu] as IdSprzetuT
       ,[Nazwa]
-      ,[DataWprowadzeniaNaRynek]
       ,[LiczbaSztuk]
       ,[IdMagazynu]
       ,[IdModelu]
@@ -357,15 +346,6 @@
                       name="Nazwa"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Output].Columns[DataWprowadzeniaNaRynek]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Output].ExternalColumns[DataWprowadzeniaNaRynek]"
-                      lineageId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Output].Columns[DataWprowadzeniaNaRynek]"
-                      name="DataWprowadzeniaNaRynek"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Output].Columns[LiczbaSztuk]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -406,10 +386,6 @@
                       length="30"
                       name="Nazwa" />
                     <externalMetadataColumn
-                      refId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Output].ExternalColumns[DataWprowadzeniaNaRynek]"
-                      dataType="dbDate"
-                      name="DataWprowadzeniaNaRynek" />
-                    <externalMetadataColumn
                       refId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Output].ExternalColumns[LiczbaSztuk]"
                       dataType="i4"
                       name="LiczbaSztuk" />
@@ -440,11 +416,6 @@
                       length="30"
                       lineageId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
                       name="Nazwa" />
-                    <outputColumn
-                      refId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Error Output].Columns[DataWprowadzeniaNaRynek]"
-                      dataType="dbDate"
-                      lineageId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Error Output].Columns[DataWprowadzeniaNaRynek]"
-                      name="DataWprowadzeniaNaRynek" />
                     <outputColumn
                       refId="Package\Load FactSprzetSt\Sprzety.Outputs[OLE DB Source Error Output].Columns[LiczbaSztuk]"
                       dataType="i4"
@@ -518,16 +489,16 @@
         <NodeLayout
           Size="170,42"
           Id="Package\Load FactSprzetSt"
-          TopLeft="367,411.636363636364" />
+          TopLeft="369,411.636363636364" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="485.090909090909,182">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-33.090909090909,229.636363636364"
+              EndConnector="-31.090909090909,229.636363636364"
               Start="0,0"
-              End="-33.090909090909,222.136363636364">
+              End="-31.090909090909,222.136363636364">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -538,13 +509,13 @@
                     Point2="0,114.818181818182"
                     Point3="-4,114.818181818182" />
                   <mssgle:LineSegment
-                    End="-29.090909090909,114.818181818182" />
+                    End="-27.090909090909,114.818181818182" />
                   <mssgle:CubicBezierSegment
-                    Point1="-29.090909090909,114.818181818182"
-                    Point2="-33.090909090909,114.818181818182"
-                    Point3="-33.090909090909,118.818181818182" />
+                    Point1="-27.090909090909,114.818181818182"
+                    Point2="-31.090909090909,114.818181818182"
+                    Point3="-31.090909090909,118.818181818182" />
                   <mssgle:LineSegment
-                    End="-33.090909090909,222.136363636364" />
+                    End="-31.090909090909,222.136363636364" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

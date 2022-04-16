@@ -1,188 +1,193 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="4/15/2022 4:42:00 PM"
+  DTS:CreationDate="4/16/2022 1:02:31 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-NLGR6P9"
   DTS:CreatorName="DESKTOP-NLGR6P9\Marcin"
-  DTS:DTSID="{2755D1B0-6468-4954-8375-D4C414187003}"
+  DTS:DTSID="{47B592BF-2ED6-4292-B5ED-207AAC89F14A}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.180"
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="3"
-  DTS:VersionGUID="{04B3BD4D-7C41-48A1-9B4B-1E28BF39B69E}">
+  DTS:VersionGUID="{8C1A3F2C-F8E8-4DDD-BEC4-615FA74784A9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Sequence Container"
+      DTS:refId="Package\Ladowanie"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:DTSID="{F9AB2812-7CFE-43A9-B075-01ABC07DC155}"
+      DTS:DTSID="{74C83017-A09A-40CE-9C03-33EE482E4D00}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Sequence Container">
+      DTS:ObjectName="Ladowanie">
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\DimKanalAkcjiOds"
+          DTS:refId="Package\Ladowanie\DimKanalAkcji"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
-          DTS:DTSID="{739F4994-44A1-47FA-95E1-A531BC846A47}"
+          DTS:DTSID="{3457e36f-b56f-4697-9752-582f2a3b6df1}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="DimKanalAkcjiOds"
+          DTS:ObjectName="DimKanalAkcji"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_DimKanalAkcjiSt_SRC2.dtsx</PackageName>
+              <PackageName>LoadDW_DimKanalAkcji_ODS.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\DimKlientOds"
+          DTS:refId="Package\Ladowanie\DimKlient"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
-          DTS:DTSID="{834f7902-07eb-43d5-86db-a302d845fb25}"
+          DTS:DTSID="{D9E90DFD-7077-4069-A0B8-595D493AD73A}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="DimKlientOds"
+          DTS:ObjectName="DimKlient"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_DimKlientSt_SRC1.dtsx</PackageName>
+              <PackageName>LoadDW_DimKlient_ODS.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\DimMagazynOds"
+          DTS:refId="Package\Ladowanie\DimMagazyn"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
-          DTS:DTSID="{2ae271b8-7caf-42f5-ba13-e7c6f07d8b90}"
+          DTS:DTSID="{2789a1a9-9058-4c23-a0a0-9f9ed89974b6}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="DimMagazynOds"
+          DTS:ObjectName="DimMagazyn"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_DimMagazynSt_SRC3.dtsx</PackageName>
+              <PackageName>LoadDW_DimMagazyn_ODS.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\DimModelOds"
+          DTS:refId="Package\Ladowanie\DimModel"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
-          DTS:DTSID="{797f6f6a-19b2-4889-b14b-0d6c28cddb5b}"
+          DTS:DTSID="{7db8d4cb-92a7-4aad-8cde-e8b1394ad07c}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="DimModelOds"
+          DTS:ObjectName="DimModel"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_DimModelSt_SRC3.dtsx</PackageName>
+              <PackageName>LoadDW_DimModel_ODS.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\DimOpisAkcjiOds"
+          DTS:refId="Package\Ladowanie\DimOpisAkcjiMarketingowej"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
-          DTS:DTSID="{cef35941-f096-40f9-96b0-8d10e9dc6c65}"
+          DTS:DTSID="{13a95228-d683-45dd-bf64-62da766934df}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="DimOpisAkcjiOds"
+          DTS:ObjectName="DimOpisAkcjiMarketingowej"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_DimOpisAkcjiMarketingowejSt_SRC2.dtsx</PackageName>
+              <PackageName>LoadDW_DimOpisAkcjiMarketingowej_ODS.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\DimPracownikOds"
+          DTS:refId="Package\Ladowanie\DimPracownik"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
-          DTS:DTSID="{128bd2e4-f7fe-4fe5-95dc-c9314c9b9fc4}"
+          DTS:DTSID="{c3b6f9a6-5ccd-4ffd-892f-4fd0224e7039}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="DimPracownikOds"
+          DTS:ObjectName="DimPracownik"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_DimPracownikSt_SRC1.dtsx</PackageName>
+              <PackageName>LoadDW_DimPracownik_ODS.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ladowanie faktów"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{380301AD-F5BB-44FD-B8BC-08235EEAAE4D}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ladowanie faktów">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Ladowanie faktów\FactAkcje"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{b2d12aa6-6422-4af7-a489-7022d0b2ccd5}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FactAkcje"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>LoadDW_FactAkcje_ODS.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\FactAkcjeSzczegolyOds"
+          DTS:refId="Package\Ladowanie faktów\FactTransakcje"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
-          DTS:DTSID="{5c36bdde-5fe2-4400-ba1d-9600301186c1}"
+          DTS:DTSID="{3218b458-5cea-46af-aada-64bb162c07ef}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="FactAkcjeSzczegolyOds"
+          DTS:ObjectName="FactTransakcje"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_FactAkcjeSzczegolySt_SRC2 1.dtsx</PackageName>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Sequence Container\FactSprzetOds"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:DTSID="{5378e3cc-91c8-4d15-bd46-e443ff0c9c62}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="FactSprzetOds"
-          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_FactSprzetSt_SRC3.dtsx</PackageName>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Sequence Container\FactTransakcjeOds"
-          DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="Execute Package Task"
-          DTS:DTSID="{d0642a84-6eb5-442f-bf9a-21af587d39ec}"
-          DTS:ExecutableType="Microsoft.ExecutePackageTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="FactTransakcjeOds"
-          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <UseProjectReference>True</UseProjectReference>
-              <PackageName>LoadODS_FactTransakcjeSt_SRC1.dtsx</PackageName>
+              <PackageName>LoadDW_FactTransakcje_ODS.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{A49D1FAB-ADD6-4C01-8AF1-01D1FA74DDD3}"
+      DTS:From="Package\Ladowanie"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Ladowanie faktów" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -194,50 +199,87 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="170,42"
-          Id="Package\Sequence Container\DimKanalAkcjiOds"
-          TopLeft="35,16" />
+          Size="126,42"
+          Id="Package\Ladowanie\DimKlient"
+          TopLeft="17,27" />
         <NodeLayout
-          Size="146,42"
-          Id="Package\Sequence Container\DimKlientOds"
-          TopLeft="442,18" />
+          Size="162,42"
+          Id="Package\Ladowanie\DimPracownik"
+          TopLeft="158,26" />
         <NodeLayout
-          Size="163,42"
-          Id="Package\Sequence Container\DimMagazynOds"
-          TopLeft="334,307" />
+          Size="189,49"
+          Id="Package\Ladowanie\DimMagazyn"
+          TopLeft="53,124" />
         <NodeLayout
-          Size="149,42"
-          Id="Package\Sequence Container\DimModelOds"
-          TopLeft="176,242" />
+          Size="129,42"
+          Id="Package\Ladowanie\DimModel"
+          TopLeft="66,191" />
         <NodeLayout
-          Size="170,42"
-          Id="Package\Sequence Container\DimOpisAkcjiOds"
-          TopLeft="29,91" />
+          Size="189,49"
+          Id="Package\Ladowanie\DimKanalAkcji"
+          TopLeft="475,103" />
         <NodeLayout
-          Size="170,42"
-          Id="Package\Sequence Container\DimPracownikOds"
-          TopLeft="230,11" />
-        <NodeLayout
-          Size="210,42"
-          Id="Package\Sequence Container\FactAkcjeSzczegolyOds"
-          TopLeft="324,115" />
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Sequence Container\FactSprzetOds"
-          TopLeft="350,200" />
-        <NodeLayout
-          Size="201,42"
-          Id="Package\Sequence Container\FactTransakcjeOds"
-          TopLeft="18,159" />
+          Size="225,57"
+          Id="Package\Ladowanie\DimOpisAkcjiMarketingowej"
+          TopLeft="444,22" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="593,404"
-          Size="593,447"
-          Id="Package\Sequence Container"
-          TopLeft="474,283" />
+          PanelSize="708,361"
+          Size="708,404"
+          Id="Package\Ladowanie"
+          TopLeft="469,235" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Ladowanie faktów\FactAkcje"
+          TopLeft="18,8" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Ladowanie faktów\FactTransakcje"
+          TopLeft="195,18" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="537,115"
+          Size="537,158"
+          Id="Package\Ladowanie faktów"
+          TopLeft="516,700" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="823,639">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-38.5,61"
+              Start="0,0"
+              End="-38.5,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.5"
+                    Point2="0,30.5"
+                    Point3="-4,30.5" />
+                  <mssgle:LineSegment
+                    End="-34.5,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.5,30.5"
+                    Point2="-38.5,30.5"
+                    Point3="-38.5,34.5" />
+                  <mssgle:LineSegment
+                    End="-38.5,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
