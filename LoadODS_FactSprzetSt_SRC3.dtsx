@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{4BEE7E7E-A36C-4B12-AE46-17F09C513781}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{1424AC16-3F28-4F29-B4AF-32CEF159B3F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAPo9gx0YRZhqwlB6eN70/mEccCkSwVLuxSYA5oWdqW7wAAAAAOgAAAAAIAACAAAAAynOYD49Jiiq6XnTq6qmfZFVK6J31xzndmVEtHRfFQrCAAAACffeinvMUv8ZJ5IjqWWpXNTRK7SpNS1wBUvYzNKBUyIUAAAADnv96Cfw87D/alKnF0xogkHr0SG94nKjjKA7rrMIu+mxWbycIaA24EWBBiUlL83KrOSuBcfEJ9LWjFdBZvetDz</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/LniRh4WE8f5hNT+ZzFIPy9eVtdoTdZg46ae3ujmOAgAAAAAOgAAAAAIAACAAAABMYVjckGdM/5l0gVMGfmiD1dWVLk8ta5RTss/BMqel4SAAAACwAM2D8ArsOdODq5dB91qKgCbaHHQrN56FbR83UznTlkAAAADG4wWCNgEqcHx9euOs1nC6Sa4UMl3F8L8wOiJF6NbYWkahp/o4iP469NVsYxid3ZPxB8mEdf2rlnXJ+7czp9MF</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADvpCdlehLoCL/p3lEicTYYhsz67O9R9IkPeYtpC9nHdgAAAAAOgAAAAAIAACAAAABGaxQD3p6h7aCS2KTIhUY/+Z66KeFo2/Pqcdnb49HqhSAAAACPbPgbRAMx4iF3z+RpwOv2meeSQ07U9gIMKYL4IIGpgkAAAADuJtTaUmP8WpbQNbh0Uau2pG5E3cPxGyNLIHjmGl8TbLvW64itmgt3LzXv+8IOobt43MFBeTeUrV63DhVqxg2+</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABWMWMu92oEwrBMXFz094SfONe6scW+hNpSPByBCUK6MwAAAAAOgAAAAAIAACAAAACbWIdbgd61ayqSbTfWkojoJpKF4NBUHq9di5KvuToQUSAAAADaVugOnt+FXkEoyEtP+BLTF3kb8/cQ4bLwlRomQnVfdUAAAACibS4xab4bw90oG6HdyAPm0ZipiCLYQl1Vfv+SQ6+u9AA8kiDn3zTARlsClPmhLP0DA4+0685v0+MSEOTaUWg4</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -63,7 +63,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+DGCJUK4e3fweASISj1ZD1kidpAG328YzC2lkOFkjawAAAAAOgAAAAAIAACAAAABFpimOPfztpzTgopJVkswWHj/ftfHd7IbfIF1TWHusBiAAAABaJoKj4CgKCgvSgjLy2niyfgz3MaV4MPGU764kDnClJUAAAAAN/Ij11LN5MAQ1UgMNgnPL+ZnpEGzAyJcuaM7WrlxrqQhQAgm/C6d+d44kKlPGXAy/qDbz2qF9RXHRDXJv7xq3</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADzHbIyroEOn0Rvy0uCV1ihNtwPJvB4zLtmrfIf15u2pwAAAAAOgAAAAAIAACAAAABpWu7Rvdm7LtOnzzDR2+q1Fs4sqxRN0YM19YPtjQn/yyAAAADUwg5Tr0AMzweTpbO5NlUgVCmlysZkLLF8k+YWtq5+7UAAAABFw35fW7DSgcxI3dZg43gwZLpDFWnqc+4dMQWPM81gUNyx7P6gF0tyC22ZBHYqCf/kYXn9rFkzC/IOq4lhzOIQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -288,8 +288,7 @@
       ,[LiczbaSztuk]
       ,[IdMagazynu]
       ,[IdModelu]
-  FROM Sprzety s 
-    where s.[DataModyfikacji] &gt;= dateadd(day,-1,cast(CURRENT_TIMESTAMP as date))</property>
+  FROM Sprzety s</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."

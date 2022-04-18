@@ -1,0 +1,1616 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/18/2022 10:46:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-NLGR6P9"
+  DTS:CreatorName="DESKTOP-NLGR6P9\Marcin"
+  DTS:DTSID="{BB9E80ED-FA17-4C26-9514-B09CA030A9E5}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="LoadDW_FactSprzet_ODS"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{9A07B4A7-7EC1-4919-BA14-10B14CE4FCA9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{13705AB5-DF3B-4E87-B320-FE07A653A656}"
+      DTS:ObjectName="194.29.170.4.ABD_GR05_DW.ABDGR05 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=194.29.170.4;User ID=ABDGR05;Initial Catalog=ABD_GR05_DW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB9pZdSO0pnJCdYzzyGnr3LO+LNWXVspLSpFKx2mKca9AAAAAAOgAAAAAIAACAAAAAKp0w6ha0yIne7oc7hpmK8HnEHzAHhtXCm1ZcYKSbrxiAAAADrmkzhIGxzH1dAxbH8s7fAVtwvGGR6ZM9lzNPb3UdJRkAAAACEFg8EWEQU+Ksv9yNatnDuhDMxODK7YBSrXwWY7D2+/NTd1jlPtE6VzHA5zR6jIOaaWAO7pIbYkdVzec3d+z25</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_ODS.ABDGR05 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{68D19840-862F-41B0-B370-04D0B7ED7A3F}"
+      DTS:ObjectName="194.29.170.4.ABD_GR05_ODS.ABDGR05 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=194.29.170.4;User ID=ABDGR05;Initial Catalog=ABD_GR05_ODS;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHY2x/ZVFtU+94Ry+2TS9HgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABS9OG+zwzKZG9Gaw1a3PTepaaVaX0kvfu9jbC+KT026gAAAAAOgAAAAAIAACAAAADSbRgSOSh0HMn8iWf5geE3DQPnSt25SOYcU26jWufP+yAAAACpNsOjWwnIDpKAwne/oaByP51d/pIQz1v7TI7RhoACUkAAAABpNzvuIPwdDItID60ptoVHEHtLKxrIKXpWmzglNQBnZwVIrzzmpxhIbug3nDFFvroM9vX+HamsrlJpF58T/hSJ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Sprzet"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EBADA860-B98A-4355-83A5-50349E574FA8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Sprzet"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Sprzet\DimCzas"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="DimCzas"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCzas]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCzas]) [refTable]
+where [refTable].[Data] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IdCzasu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Data" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Miesiac" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Kwartal" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Rok" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DzienTygodnia" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DzienMiesiaca" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NazwaDniaTygodniaPol" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="NazwaDniaTygodniaAng" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="NazwaMiesiacaPol" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="NazwaMiesiacaAng" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="DataUtworzenia" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DataModyfikacji" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[Data]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sprzet\DimCzas.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Sprzet\DimCzas.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Sprzet\DimCzas.Inputs[Lookup Input].Columns[Data]"
+                      cachedDataType="dbDate"
+                      cachedName="Data"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[Data]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Data</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Sprzet\DimCzas.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load Sprzet\DimCzas.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimCzas.Outputs[Lookup Match Output].Columns[IdCzasu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Load Sprzet\DimCzas.Outputs[Lookup Match Output].Columns[IdCzasu]"
+                      name="IdCzasu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IdCzasu</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\DimCzas.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load Sprzet\DimCzas.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\DimCzas.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load Sprzet\DimCzas.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimCzas.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\DimCzas.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimCzas.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\DimCzas.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Sprzet\DimMagazyn"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="DimMagazyn"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimMagazyn]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimMagazyn]) [refTable]
+where [refTable].[IdMagazynuT] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IdMagazynu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IdMagazynuT" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PowierzchniaUzytkowa" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Miasto" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Ulica" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="NumerLokalu" dataType="DT_STR" length="5" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="KodPocztowy" dataType="DT_STR" length="6" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="DataUtworzenia" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DataModyfikacji" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdMagazynu]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sprzet\DimMagazyn.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Sprzet\DimMagazyn.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Sprzet\DimMagazyn.Inputs[Lookup Input].Columns[IdMagazynu]"
+                      cachedDataType="i4"
+                      cachedName="IdMagazynu"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdMagazynu]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">IdMagazynuT</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load Sprzet\DimMagazyn.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Match Output].Columns[IdMagazynu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Match Output].Columns[IdMagazynu]"
+                      name="IdMagazynu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IdMagazynu</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load Sprzet\DimMagazyn.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load Sprzet\DimMagazyn.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Sprzet\DimModel"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="DimModel"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimModel]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimModel]) [refTable]
+where [refTable].[IdModeluT] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IdModelu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IdModeluT" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NazwaTypuUrzadzenia" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="NazwaMarki" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="NazwaSerii" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="NazwaModelu" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="DataWprowadzeniaNaRynek" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DataUtworzenia" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DataModyfikacji" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdModelu]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sprzet\DimModel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Sprzet\DimModel.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Sprzet\DimModel.Inputs[Lookup Input].Columns[IdModelu]"
+                      cachedDataType="i4"
+                      cachedName="IdModelu"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdModelu]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">IdModeluT</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Sprzet\DimModel.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load Sprzet\DimModel.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimModel.Outputs[Lookup Match Output].Columns[IdModelu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Load Sprzet\DimModel.Outputs[Lookup Match Output].Columns[IdModelu]"
+                      name="IdModelu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IdModelu</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\DimModel.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load Sprzet\DimModel.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\DimModel.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load Sprzet\DimModel.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimModel.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\DimModel.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\DimModel.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\DimModel.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Sprzet\FactSprzetSt"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="FactSprzetSt"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactSprzetSt]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sprzet\FactSprzetSt.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_ODS.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_ODS.ABDGR05 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdSprzetu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[IdSprzetu]"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdSprzetu]"
+                      name="IdSprzetu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[Nazwa]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
+                      length="30"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[Nazwa]"
+                      name="Nazwa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[LiczbaSztuk]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[LiczbaSztuk]"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[LiczbaSztuk]"
+                      name="LiczbaSztuk"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdMagazynu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[IdMagazynu]"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdMagazynu]"
+                      name="IdMagazynu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdModelu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[IdModelu]"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[IdModelu]"
+                      name="IdModelu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[Data]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[Data]"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[Data]"
+                      name="Data"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[IdSprzetu]"
+                      dataType="i4"
+                      name="IdSprzetu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[Nazwa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Nazwa" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[LiczbaSztuk]"
+                      dataType="i4"
+                      name="LiczbaSztuk" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[IdMagazynu]"
+                      dataType="i4"
+                      name="IdMagazynu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[IdModelu]"
+                      dataType="i4"
+                      name="IdModelu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].ExternalColumns[Data]"
+                      dataType="dbDate"
+                      name="Data" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[IdSprzetu]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[IdSprzetu]"
+                      name="IdSprzetu" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[Nazwa]"
+                      name="Nazwa" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[LiczbaSztuk]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[LiczbaSztuk]"
+                      name="LiczbaSztuk" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[IdMagazynu]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[IdMagazynu]"
+                      name="IdMagazynu" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[IdModelu]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[IdModelu]"
+                      name="IdModelu" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[Data]"
+                      dataType="dbDate"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[Data]"
+                      name="Data" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Sprzet\Insert Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactSprzet]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sprzet\Insert Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].Columns[IdMagazynu]"
+                      cachedDataType="i4"
+                      cachedName="IdMagazynu"
+                      externalMetadataColumnId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdMagazynu]"
+                      lineageId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Match Output].Columns[IdMagazynu]" />
+                    <inputColumn
+                      refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].Columns[IdModelu]"
+                      cachedDataType="i4"
+                      cachedName="IdModelu"
+                      externalMetadataColumnId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdModelu]"
+                      lineageId="Package\Load Sprzet\DimModel.Outputs[Lookup Match Output].Columns[IdModelu]" />
+                    <inputColumn
+                      refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].Columns[IdCzasu]"
+                      cachedDataType="i4"
+                      cachedName="IdCzasu"
+                      externalMetadataColumnId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdCzasu]"
+                      lineageId="Package\Load Sprzet\DimCzas.Outputs[Lookup Match Output].Columns[IdCzasu]" />
+                    <inputColumn
+                      refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].Columns[LiczbaSztuk]"
+                      cachedDataType="i4"
+                      cachedName="LiczbaSztuk"
+                      externalMetadataColumnId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[LiczbaSztuk]"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[LiczbaSztuk]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdMagazynu]"
+                      dataType="i4"
+                      name="IdMagazynu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdModelu]"
+                      dataType="i4"
+                      name="IdModelu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdCzasu]"
+                      dataType="i4"
+                      name="IdCzasu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[LiczbaSztuk]"
+                      dataType="i4"
+                      name="LiczbaSztuk" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Sprzet\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Sprzet\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[FactSprzet] SET [LiczbaSztuk] = ? WHERE [IdCzasu] = ? AND [IdMagazynu] = ? AND [IdModelu] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sprzet\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].Columns[IdCzasu]"
+                      cachedDataType="i4"
+                      cachedName="IdCzasu"
+                      externalMetadataColumnId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load Sprzet\DimCzas.Outputs[Lookup Match Output].Columns[IdCzasu]" />
+                    <inputColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].Columns[IdMagazynu]"
+                      cachedDataType="i4"
+                      cachedName="IdMagazynu"
+                      externalMetadataColumnId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Match Output].Columns[IdMagazynu]" />
+                    <inputColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].Columns[IdModelu]"
+                      cachedDataType="i4"
+                      cachedName="IdModelu"
+                      externalMetadataColumnId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Load Sprzet\DimModel.Outputs[Lookup Match Output].Columns[IdModelu]" />
+                    <inputColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].Columns[LiczbaSztuk]"
+                      cachedDataType="i4"
+                      cachedName="LiczbaSztuk"
+                      externalMetadataColumnId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[LiczbaSztuk]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Sprzet\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Sprzet\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Sprzet\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Sprzet\Slowly Changing Dimension 1"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension 1"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [IdCzasu], [IdMagazynu], [IdModelu], [LiczbaSztuk] FROM [dbo].[FactSprzet]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sprzet\Slowly Changing Dimension 1.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[194.29.170.4.ABD_GR05_DW.ABDGR05 1]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[IdCzasu]"
+                      cachedDataType="i4"
+                      cachedName="IdCzasu"
+                      externalMetadataColumnId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdCzasu]"
+                      lineageId="Package\Load Sprzet\DimCzas.Outputs[Lookup Match Output].Columns[IdCzasu]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[IdMagazynu]"
+                      cachedDataType="i4"
+                      cachedName="IdMagazynu"
+                      externalMetadataColumnId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdMagazynu]"
+                      lineageId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Match Output].Columns[IdMagazynu]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[IdModelu]"
+                      cachedDataType="i4"
+                      cachedName="IdModelu"
+                      externalMetadataColumnId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdModelu]"
+                      lineageId="Package\Load Sprzet\DimModel.Outputs[Lookup Match Output].Columns[IdModelu]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[LiczbaSztuk]"
+                      cachedDataType="i4"
+                      cachedName="LiczbaSztuk"
+                      externalMetadataColumnId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[LiczbaSztuk]"
+                      lineageId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output].Columns[LiczbaSztuk]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdCzasu]"
+                      dataType="i4"
+                      name="IdCzasu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdMagazynu]"
+                      dataType="i4"
+                      name="IdMagazynu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[IdModelu]"
+                      dataType="i4"
+                      name="IdModelu" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[LiczbaSztuk]"
+                      dataType="i4"
+                      name="LiczbaSztuk" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Sprzet\Slowly Changing Dimension 1.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\Slowly Changing Dimension 1.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\Slowly Changing Dimension 1.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\Slowly Changing Dimension 1.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\Slowly Changing Dimension 1.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Sprzet\Slowly Changing Dimension 1.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Sprzet.Paths[Changing Attribute Updates Output]"
+              endId="Package\Load Sprzet\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\Load Sprzet\Slowly Changing Dimension 1.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\Load Sprzet.Paths[Lookup Match Output]"
+              endId="Package\Load Sprzet\DimModel.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load Sprzet\DimMagazyn.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load Sprzet.Paths[Lookup Match Output1]"
+              endId="Package\Load Sprzet\DimCzas.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load Sprzet\DimModel.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load Sprzet.Paths[Lookup Match Output2]"
+              endId="Package\Load Sprzet\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
+              name="Lookup Match Output"
+              startId="Package\Load Sprzet\DimCzas.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load Sprzet.Paths[New Output]"
+              endId="Package\Load Sprzet\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\Load Sprzet\Slowly Changing Dimension 1.Outputs[New Output]" />
+            <path
+              refId="Package\Load Sprzet.Paths[OLE DB Source Output]"
+              endId="Package\Load Sprzet\DimMagazyn.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Load Sprzet\FactSprzetSt.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Load Sprzet"
+          TopLeft="613,218" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Sprzet">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Load Sprzet\DimModel"
+          TopLeft="253.5,209.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Load Sprzet\FactSprzetSt"
+          TopLeft="246.5,5.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Load Sprzet\DimMagazyn"
+          TopLeft="246.5,107.5" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Load Sprzet\DimCzas"
+          TopLeft="256,311.5" />
+        <EdgeLayout
+          Id="Package\Load Sprzet.Paths[OLE DB Source Output]"
+          TopLeft="318,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Sprzet.Paths[Lookup Match Output1]"
+          TopLeft="318,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Sprzet.Paths[Lookup Match Output]"
+          TopLeft="318,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Load Sprzet\Slowly Changing Dimension 1"
+          TopLeft="205.5,413.5" />
+        <EdgeLayout
+          Id="Package\Load Sprzet.Paths[Lookup Match Output2]"
+          TopLeft="318,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Load Sprzet\Insert Destination"
+          TopLeft="5.50000000000006,515.5" />
+        <EdgeLayout
+          Id="Package\Load Sprzet.Paths[New Output]"
+          TopLeft="281.833333333333,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-193.833333333333,60.0000000000001"
+              Start="0,0"
+              End="-193.833333333333,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2541924095323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2541924095323"
+                    Point2="0,24.2541924095323"
+                    Point3="-4,24.2541924095323" />
+                  <mssgle:LineSegment
+                    End="-189.833333333333,24.2541924095323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-189.833333333333,24.2541924095323"
+                    Point2="-193.833333333333,24.2541924095323"
+                    Point3="-193.833333333333,28.2541924095323" />
+                  <mssgle:LineSegment
+                    End="-193.833333333333,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-124.008053385417,29.2541924095323,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Load Sprzet\OLE DB Command"
+          TopLeft="231.5,515.5" />
+        <EdgeLayout
+          Id="Package\Load Sprzet.Paths[Changing Attribute Updates Output]"
+          TopLeft="354.166666666667,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-36.1666666666666,60"
+              Start="0,0"
+              End="-36.1666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2541924095322" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2541924095322"
+                    Point2="0,24.2541924095322"
+                    Point3="-4,24.2541924095322" />
+                  <mssgle:LineSegment
+                    End="-32.1666666666666,24.2541924095322" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32.1666666666666,24.2541924095322"
+                    Point2="-36.1666666666666,24.2541924095322"
+                    Point3="-36.1666666666666,28.2541924095322" />
+                  <mssgle:LineSegment
+                    End="-36.1666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-96.6172395833333,29.2541924095322,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Sprzet\DimModel">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimModel]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Sprzet\FactSprzetSt">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Sprzet\DimMagazyn">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimMagazyn]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Sprzet\DimCzas">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCzas]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Sprzet\Slowly Changing Dimension 1">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{13705AB5-DF3B-4E87-B320-FE07A653A656}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[FactSprzet]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimCzas.Outputs[Lookup Match Output].Columns[IdCzasu]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;IdCzasu&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimMagazyn.Outputs[Lookup Match Output].Columns[IdMagazynu]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;IdMagazynu&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;DimModel.Outputs[Lookup Match Output].Columns[IdModelu]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;IdModelu&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;FactSprzetSt.Outputs[OLE DB Source Output].Columns[LiczbaSztuk]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;LiczbaSztuk&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

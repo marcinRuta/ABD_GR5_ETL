@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{8C1A3F2C-F8E8-4DDD-BEC4-615FA74784A9}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{FBE982E2-8B0D-4D31-B872-CBF8A0150786}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -159,6 +159,23 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
+          DTS:refId="Package\Ladowanie faktów\FactSprzety"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{13b8cfbe-d185-4478-89f5-80d7a5499b8b}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FactSprzety"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>LoadDW_FactSprzet_ODS.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Ladowanie faktów\FactTransakcje"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
@@ -201,13 +218,13 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="189,49"
+          Id="Package\Ladowanie\DimKanalAkcji"
+          TopLeft="475,103" />
+        <NodeLayout
           Size="126,42"
           Id="Package\Ladowanie\DimKlient"
           TopLeft="17,27" />
-        <NodeLayout
-          Size="162,42"
-          Id="Package\Ladowanie\DimPracownik"
-          TopLeft="158,26" />
         <NodeLayout
           Size="189,49"
           Id="Package\Ladowanie\DimMagazyn"
@@ -217,13 +234,13 @@
           Id="Package\Ladowanie\DimModel"
           TopLeft="66,191" />
         <NodeLayout
-          Size="189,49"
-          Id="Package\Ladowanie\DimKanalAkcji"
-          TopLeft="475,103" />
-        <NodeLayout
           Size="225,57"
           Id="Package\Ladowanie\DimOpisAkcjiMarketingowej"
           TopLeft="444,22" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Ladowanie\DimPracownik"
+          TopLeft="158,26" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -239,11 +256,15 @@
           Size="154,42"
           Id="Package\Ladowanie faktów\FactTransakcje"
           TopLeft="195,18" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Ladowanie faktów\FactSprzety"
+          TopLeft="364,29" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="537,115"
-          Size="537,158"
+          PanelSize="537,126"
+          Size="537,169"
           Id="Package\Ladowanie faktów"
           TopLeft="516,700" />
         <EdgeLayout
